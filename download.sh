@@ -21,6 +21,6 @@ esac
 curl -Ls https://github.com/dndx/phantun/releases/download/$VER/$TGT -o p.zip
 unzip p.zip
 mv -f phantun_client phantun_client_$AR
-rm -f phantun_server
+rm -f phantun_server p.zip
 
 #https://github.com/dndx/phantun/releases/download/v0.8.1/phantun_x86_64-unknown-linux-musl.zip
