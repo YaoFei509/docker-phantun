@@ -1,18 +1,6 @@
-<h1 align="center">Phantun</h1>
+#Phantun
 
-<p align="center">A lightweight and fast UDP to TCP obfuscator.</p>
-
-<p align="center">
-    <a href="https://ghcr.io/akafeng/phantun">Container Registry</a> ·
-    <a href="https://github.com/dndx/phantun">Project Source</a>
-</p>
-
-<p align="center">
-    <img src="https://img.shields.io/github/workflow/status/akafeng/docker-phantun/Docker%20Build" />
-    <img src="https://img.shields.io/github/last-commit/akafeng/docker-phantun" />
-    <img src="https://img.shields.io/github/v/release/akafeng/docker-phantun" />
-    <img src="https://img.shields.io/github/release-date/akafeng/docker-phantun" />
-</p>
+A lightweight and fast UDP to TCP obfuscator.
 
 ---
 
@@ -20,32 +8,11 @@
 
 | Name | Default | Example |
 | --- | ---- | ---- |
-| TZ | UTC | Asia/Shanghai |
-| RUN_MODE | server | client |
-| LOCAL_ADDR | - | - |
-| REMOTE_ADDR | - | - |
-| TUN_NAME | - | tun0 |
+| LOCAL_PORT | 51820 | - |
+| REMOTE_HOST | - | - |
+| REMOTE_PORT | 443 | 443 |
 | TUN_LOCAL | 192.168.201.1 | - |
 | TUN_PEER | 192.168.201.2 | - |
 
 ---
-
-### Pull The Image
-
-```bash
-$ docker pull ghcr.io/akafeng/phantun
-```
-
-### Start Container
-
-```bash
-$ docker run -d \
-  --env LOCAL_ADDR="4567" \
-  --env REMOTE_ADDR="127.0.0.1:1234" \
-  --device=/dev/net/tun \
-  --cap-add=NET_ADMIN \
-  --network=host \
-  --restart=unless-stopped \
-  --name=phantun \
-  ghcr.io/akafeng/phantun
-```
+See routeros_phantun.cmd
