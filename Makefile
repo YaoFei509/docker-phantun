@@ -12,7 +12,7 @@ arm64:
 
 image: 
 	docker buildx build -t yf-phantun:latest --platform linux/x86_64 --output type=docker --load  .
-	docker save yf-phantun:latest --output yf-phantun_x64.tar
+	docker save yf-phantun:latest --output yf-phantun-x64.tar
 	docker rmi yf-phantun:latest
 
 download: phantun_client_x86_64
