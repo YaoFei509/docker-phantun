@@ -11,8 +11,8 @@ ENV REMOTE_PORT=
 ENV TUN_LOCAL=
 ENV TUN_PEER=
 
-RUN apk add --no-cache iptables
-COPY phantun_client_x86_64 /usr/local/bin/phantun_client
+#RUN apk add --no-cache iptables
+COPY phantun_client_armv7 /usr/local/bin/phantun_client
 RUN chmod +x /usr/local/bin/phantun_client
 
 COPY entrypoint.sh /entrypoint.sh
